@@ -27,6 +27,8 @@ G = "goto_file_end"
 # This maps % to quickly match the enclosing character 
 "%" = "match_brackets"
 
+# Add lazygit integration to helix
+C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 
 # `jk` to enter normal mode
 [keys.insert]

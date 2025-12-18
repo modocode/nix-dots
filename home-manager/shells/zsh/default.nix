@@ -75,7 +75,7 @@ in
 
       oh-my-zsh = {
         enable = true;
-        theme = "crunch";
+        theme = "agnoster";
       };
 
       antidote.plugins = [
