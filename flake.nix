@@ -18,6 +18,8 @@
       ...
     }@inputs:
     let
+    	system = "x86_64-linux";
+    	pkgs = nixpkgs.legacyPackages.${system};
     in
 			{
 				# NixOS configuration entrypoint
@@ -45,6 +47,21 @@
 
 						];
 					};
+				};
+
+				devShells.${system}.default = pkgs.mkShell {
+					name = "my-nix-config-shell";
+
+					packages = with pkgs; [
+						nixd
+						nixfmt-rfc-style
+						just
+					];
+					
+					shellHook = ''
+						echo "Environment prepared for NixOS configuration!"
+	          echo "LSP: nixd | Formatter: nixfmt"
+					'';
 				};
 
 
