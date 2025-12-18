@@ -8,6 +8,7 @@
     tree
     dmenu
     peazip
+    direnv
   ];
   programs.firefox = {
 		enable = true; 
