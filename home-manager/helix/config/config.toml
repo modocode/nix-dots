@@ -1,0 +1,33 @@
+theme = "gruber-darker"
+
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+# Mimic Vim's 'V' (Visual Line Mode)
+V = ["select_mode", "extend_to_line_bounds"]
+
+# Vim uses 'D' to delete until end of line
+D = ["extend_to_line_end", "delete_selection", ]
+
+# Vim uses 'G' to go to the very bottom, Helix uses 'ge' (goto end)
+G = "goto_file_end"
+
+# Vim uses '%' for matching pairs, Helix uses 'm' (match mode)
+# This maps % to quickly match the enclosing character 
+"%" = "match_brackets"
+
+
+# `jk` to enter normal mode
+[keys.insert]
+j = { k = "normal_mode" }
