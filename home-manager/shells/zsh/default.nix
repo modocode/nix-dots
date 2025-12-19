@@ -81,7 +81,6 @@ in
       antidote = {
         enable = true;
         plugins = [
-          "romkatv/powerlevel10k"
           "chisui/zsh-nix-shell"
           "Aloxaf/fzf-tab"
           "MichaelAquilina/zsh-you-should-use"
