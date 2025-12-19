@@ -5,6 +5,7 @@
     wget
     alacritty
     git
+    keyd
     tree
     dmenu
     peazip

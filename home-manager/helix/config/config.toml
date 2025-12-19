@@ -1,4 +1,4 @@
-theme = "gruber-darker"
+theme = "solarized_dark"
 
 
 [editor]
@@ -30,6 +30,13 @@ G = "goto_file_end"
 # Add lazygit integration to helix
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 
+# line-up
+C-e = ["keep_primary_selection","extend_line","yank","move_line_up","open_above","normal_mode","replace_with_yanked", "move_line_down", "move_line_down", "extend_line", "delete_selection", "move_line_up", "move_line_up"]
+# line-down
+C-d = ["keep_primary_selection","extend_line","delete_selection", "paste_after", "move_line_down"]
+
+
 # `jk` to enter normal mode
 [keys.insert]
 j = { k = "normal_mode" }
+
