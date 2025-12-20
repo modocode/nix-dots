@@ -30,6 +30,7 @@ in
 
       
       # TODO: Configure plasma-manager (home-manager config of plasma)
+      # Plasma-manager options: https://nix-community.github.io/plasma-manager/options.xhtml
       # programs.plasma = {
       #   enable = true;
       # };
