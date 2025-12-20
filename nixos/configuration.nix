@@ -57,7 +57,10 @@
 	nixpkgs.config.allowUnfree = true;
 
 
-	my.desktop.enable = "kde";
+	my.desktop = {
+	  enable = true;
+	  manager = "kde";
+	}
 	
 
 
