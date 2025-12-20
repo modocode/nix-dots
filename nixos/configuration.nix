@@ -60,7 +60,7 @@
 	my.desktop = {
 	  enable = true;
 	  manager = "kde";
-	}
+	};
 	
 
 
