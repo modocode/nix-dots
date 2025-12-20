@@ -1,14 +1,10 @@
 {
   pkgs,
-  config,
   lib,
+  config,
   ...
 }:
-
 let
-  cfg = config.my.desktop.xmonad;
-
-  # Credit to Tony-btw for the config
 
   xmonadConfig = ''
     import Data.Map qualified as M
@@ -244,30 +240,7 @@ let
   '';
 
 in
+
 {
-  options.my.desktop.xmonad = {
-    enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-      description = "Enable Xmonad";
-    };
-  };
-
-  config = lib.mkIf cfg.enable {
-
-    services.xserver.windowManager = {
-      xmonad = {
-        enable = true;
-        enableContribAndExtras = true;
-        extraPackages = haskellPackages: [
-          haskellPackages.xmonad-contrib
-          haskellPackages.xmonad-extras
-          haskellPackages.xmonad
-        ];
-        config = xmonadConfig;
-      };
-    };
-
-
-  };
+  xdg.configFile."~/.config/xmobar/xmobarrc".text = xmobarConfig;
 }

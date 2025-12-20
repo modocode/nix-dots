@@ -14,6 +14,7 @@
     ./helix
     ./git
     ./shells/zsh
+    ./xmonad/default.nix
   ];
 
 
