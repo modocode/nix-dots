@@ -28,28 +28,10 @@ in
         (pkgs.emacsWithPackagesFromUsePackage {
           config = "./config/init.el";
           package = pkgs.emacs-pgtk;
-          alwaysEnsure = false;
+          alwaysEnsure = true;
           extraEmacsPackages =
             epkgs: with epkgs; [
-              corfu
-              vertico
-              orderless
-              evil
-              evil-collection
-              evil-snipe
-              evil-owl
-              evil-vimish-fold
-              direnv
-              yasnippet
-              magit
-              magit-todos
-              nix-mode
-              python
-              python-mode
-              lsp-mode
-              flycheck
-              lsp-ui
-
+              use-package
             ];
         }
 

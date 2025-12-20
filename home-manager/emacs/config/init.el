@@ -1,12 +1,12 @@
-(require 'use-package)
+;; Add package servers
+(add-to-list 'package-archives '("gnu"  . "https://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 
-(use-package use-package
-	:custom
-	(use-package-always-ensure nil)
-	(usepackage-always-defer nil))
-)
-
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 (use-package emacs
 
@@ -17,6 +17,8 @@
   (setq inhibit-startup-message t)
 
   (setq custom-file "/dev/null")
+
+  (setq ring-bell-function 'ignore)
 
   ;; Auto save errors are annoying
   (setq auto-save-default nil)
@@ -33,6 +35,13 @@
   ;; Disable tooltips
   (tooltip-mode -1)
   
+
+
+  (setq default-tab-width 4)
+  (setq-default c-basic-offset 4)
+
+  (add-to-list 'default-frame-alist '(width  . 140))
+  (add-to-list 'default-frame-alist '(height . 80))
   ;; Breathing room
   (set-fringe-mode 10)
   
@@ -81,7 +90,25 @@
   :init
   (global-corfu-mode 1))
 
-(use-package nix-mode)
+(use-package nix-mode
+  :mode "\\.nix\\'"
+)
+
+
+(use-package nixpkgs-fmt
+  :hook
+  (nix-mode . nixpkgs-fmt-on-save-mode))
+
+
+  (use-package direnv
+  :init
+  (direnv-mode)
+  :config
+  (custom-set-variables
+   '(direnv-non-file-modes '(compilation-mode
+                             dired-mode
+                             eshell-mode
+                             magit-status-mode)))
 
 (use-package lsp-mode
   :config
@@ -94,11 +121,21 @@
   :hook
   (lsp-mode . evil-normalize-keymaps)
   (nix-mode . lsp-deferred)
-  (gdscript-mode . lsp-deferred)
-  (gdscript-ts-mode . lsp-deferred))
+)
+
+(use-package lsp-ui
+  :custom
+  (lsp-ui-doc-enable t)
+  (lsp-ui-flycheck-enable t)
+  (lsp-ui-peek-enable t)
+  :commands lsp-ui-mode
+  :config
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode))
 
 (use-package lsp-nix
   :after (lsp-mode))
+
+
 
 (use-package lsp-ui :commands lsp-ui-mode)
 
@@ -112,4 +149,12 @@
   (vertico-cycle t) ;; Enable cycling for `vertico-next/previous'
   :init
   (vertico-mode))
+
+  (set-face-attribute 'default nil
+                    :family "JetBrains Mono Nerd Font"
+		    ;; :family "Pragmata Pro Mono"
+		    :height 120
+                    :weight 'medium)
+
+(setq-default line-spacing 0)
 
