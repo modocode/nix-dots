@@ -15,6 +15,7 @@
     ./git
     ./shells/zsh
     ./xmonad/default.nix
+    ./emacs
   ];
 
 

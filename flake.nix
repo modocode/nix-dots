@@ -63,6 +63,12 @@
           nixd
           nixfmt-rfc-style
           just
+
+          gcc                   # C Compiler
+          gnumake               # Make
+          cmake                 # CMake
+          libtool               # Library tool
+          
         ];
 
         shellHook = ''
