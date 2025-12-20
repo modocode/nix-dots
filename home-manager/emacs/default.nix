@@ -58,6 +58,7 @@ in
       ];
 
     };
+
+    xdg.configFile."emacs".source = config.lib.file.mkOutofStoreSymlink emacsConfigPath;
   };
-  xdg.configFile."emacs".source = config.lib.file.mkOutofStoreSymlink emacsConfigPath;
 }
