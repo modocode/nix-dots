@@ -22,9 +22,11 @@ in
   config = lib.mkIf cfg.enable {
     services.emacs.enable = true;
     services.emacs.defaultEditor = true;
-    services.emacs.package = pkgs.emacs-unstable;
+    services.emacs.package = pkgs.emacs-pgtk;
     programs.emacs = {
       enable = true;
+    };
+
       home.packages = with pkgs; [
         (pkgs.emacsWithPackagesFromUsePackage {
           config = "./config/init.el";
@@ -56,9 +58,6 @@ in
 
         )
       ];
-
-    };
-
-    xdg.configFile."emacs".source = config.lib.file.mkOutofStoreSymlink emacsConfigPath;
+     xdg.configFile."emacs".source = config.lib.file.mkOutofStoreSymlink emacsConfigPath;
   };
 }

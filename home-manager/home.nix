@@ -37,6 +37,7 @@
   # ----- Enable Editors 
 
   my.editor.helix.enable = true;
+  my.editor.emacs.enable = true; 
 
 
 
