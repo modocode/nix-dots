@@ -23,9 +23,9 @@ in
     services.emacs.enable = true;
     services.emacs.defaultEditor = true;
     services.emacs.package = pkgs.emacs-pgtk;
-
-      home.packages = with pkgs; [
-        (pkgs.emacsWithPackagesFromUsePackage {
+    programs.emacs = {
+      enable = true;
+      package = pkgs.emacsWithPackagesFromUsePackage {
           config = "./config/init.el";
           package = pkgs.emacs-pgtk;
           alwaysEnsure = true;
@@ -33,10 +33,9 @@ in
             epkgs: with epkgs; [
               use-package
             ];
-        }
+        };
+    };
 
-        )
-      ];
      xdg.configFile."emacs".source = config.lib.file.mkOutOfStoreSymlink emacsConfigPath;
   };
 }

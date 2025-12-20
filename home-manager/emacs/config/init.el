@@ -3,6 +3,7 @@
 (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
+(package-initalize)
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
