@@ -5,6 +5,7 @@
 		enableDefaultPackages = true; 
 		packages = with pkgs; [
 			nerd-fonts.fantasque-sans-mono
+			nerd-fonts.jetbrains-mono
 			ibm-plex
 			
 		];
@@ -13,7 +14,7 @@
 			defaultFonts = {
 				serif = [];
 				sansSerif = [];
-				monospace = [ "fantasque-sans-mono" ] ;
+				monospace = [ "fantasque-sans-mono" "jetbrains-mono" ] ;
 			};
 		};
 		fontDir.enable = true;

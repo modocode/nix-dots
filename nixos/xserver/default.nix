@@ -1,43 +1,29 @@
-{lib, pkgs , config, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+  let
+    cfg = config.my.desktop;
+  
 
-  imports = [
-    #./xmonad.nix
-  ];
- 
-  services = {
-    
-    xserver = {
-        enable = true;
-        autorun = true;
-        autoRepeatDelay = 200;
-        autoRepeatInterval = 35;
-        desktopManager = {
-          xfce = {
-            enable = true;
-            enableXfwm = true; 
-          };
-        };
-        windowManager = {
-          xmonad = {
-            enable = false;
-           # enableContribAndExtras= true;
-           # extraPackages = haskellPackages : [
-           #   haskellPackages.xmonad-contrib
-           #   haskellPackages.xmonad-extras
-           #   haskellPackages.xmonad
-           # ];
-        
-          };
-        };
+  in
+  {
+    options.my.desktop = {
+      enable = lib.mkOption {
+        type = lib.types.enum ["kde" "xmonad" null];
+        default = "kde";
+        description = "Desktop/Window Manager Settings";
       };
-        displayManager = {
-          ly = {
-            enable = true;
-          };
-        };
-      
-};
-  services.displayManager.defaultSession = "xfce";
-  programs.thunar.enable = true;
-}
+    };
+
+
+    #TODO Configure Tileing Window Managers Like Niri/Hyprland 
+
+    config = lib.mkIf cfg.enable {
+      my.desktop.kde.enable = lib.mkIf (config.my.desktop == "kde") true;
+      my.desktop.xmonad.enable = lib.mkIf (config.my.desktop == "xmonad") true;
+    };
+  }
+  

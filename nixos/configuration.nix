@@ -57,6 +57,10 @@
 	nixpkgs.config.allowUnfree = true;
 
 
+	my.desktop.enable = "kde";
+	
+
+
 
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

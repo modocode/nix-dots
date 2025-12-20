@@ -13,6 +13,13 @@
       #     patches = [ ./change-hello-to-hi.patch ];
       #   });
       # })
+
+
+      # Emacs Overlay
+      (import (builtins.fetchTarball {
+      url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
+    }))
+      
     ];
     # Configure your nixpkgs instance
     config = {
