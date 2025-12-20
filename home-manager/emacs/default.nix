@@ -7,7 +7,7 @@
 let
   cfg = config.my.editor.emacs;
 	repoPath = "${config.home.homeDirectory}/dots/home-manager";
-	emacsConfigPath = "{repoPath}/emacs/config";
+	emacsConfigPath = "${repoPath}/emacs/config";
 in
 {
   options.my.editor.emacs = {
@@ -23,9 +23,6 @@ in
     services.emacs.enable = true;
     services.emacs.defaultEditor = true;
     services.emacs.package = pkgs.emacs-pgtk;
-    programs.emacs = {
-      enable = true;
-    };
 
       home.packages = with pkgs; [
         (pkgs.emacsWithPackagesFromUsePackage {
@@ -58,6 +55,6 @@ in
 
         )
       ];
-     xdg.configFile."emacs".source = config.lib.file.mkOutofStoreSymlink emacsConfigPath;
+     xdg.configFile."emacs".source = config.lib.file.mkOutOfStoreSymlink emacsConfigPath;
   };
 }
