@@ -9,11 +9,11 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
+    # plasma-manager = {
+    #   url = "github:nix-community/plasma-manager";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.home-manager.follows = "home-manager";
+    # };
   };
 
   outputs =
@@ -37,7 +37,7 @@
           # > Our main nixos configuration file <
           modules = [
             ./nixos/configuration.nix
-            inputs.plasma-manager.homeModules.plasma-manager
+            # inputs.plasma-manager.homeModules.plasma-manager
 
             home-manager.nixosModules.home-manager
             {

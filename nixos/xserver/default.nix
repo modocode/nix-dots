@@ -10,6 +10,12 @@
 
   in
   {
+
+    imports = [
+      ./kde
+      ./xmonad
+    ];
+    
     options.my.desktop = {
       enable = lib.mkOption {
         type = lib.types.enum ["kde" "xmonad" null];
