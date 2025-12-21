@@ -15,7 +15,7 @@
 			defaultFonts = {
 				serif = [];
 				sansSerif = [];
-				monospace = [ "fantasque-sans-mono" "jetbrains-mono" ] ;
+				monospace = [ "fantasque-sans-mono" "jetbrains-mono" "fira-code" ] ;
 			};
 		};
 		fontDir.enable = true;
