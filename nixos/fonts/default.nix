@@ -6,6 +6,7 @@
 		packages = with pkgs; [
 			nerd-fonts.fantasque-sans-mono
 			nerd-fonts.jetbrains-mono
+      fira-code
 			ibm-plex
 			
 		];

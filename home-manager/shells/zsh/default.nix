@@ -21,6 +21,7 @@ let
     fd = "fd -Lu";
     ns = "nh os switch . -H";
     nc = "nh clean all";
+
   };
 in
 {
