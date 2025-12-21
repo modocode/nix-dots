@@ -25,17 +25,10 @@ in
     services.emacs.package = pkgs.emacs-pgtk;
     programs.emacs = {
       enable = true;
-      package = pkgs.emacsWithPackagesFromUsePackage {
-          config = "./config/init.el";
-          package = pkgs.emacs-pgtk;
-          alwaysEnsure = true;
-          extraEmacsPackages =
-            epkgs: with epkgs; [
-              use-package
-            ];
-        };
+			package = pkgs.emacs-pgtk;
+			defaultEditor = true;
     };
 
-     xdg.configFile."emacs".source = config.lib.file.mkOutOfStoreSymlink emacsConfigPath;
+     #xdg.configFile."emacs".source = config.lib.file.mkOutOfStoreSymlink emacsConfigPath;
   };
 }
