@@ -10,6 +10,7 @@
     dmenu
     peazip
     direnv
+    ocs-url
   ];
   programs.firefox = {
 		enable = true; 
