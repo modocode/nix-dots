@@ -10,12 +10,14 @@
 {
   # You can import other home-manager modules here
   imports = [
+    inputs.zen-browser.homeModules.twilight-official
 
     ./helix
     ./git
     ./shells/zsh
     ./xmonad/default.nix
     ./emacs
+
   ];
 
 
@@ -32,6 +34,10 @@
   # ----- Git 
   
   my.git.enable = true;
+
+
+  # ---- Zen browser
+  programs.zen-browser.enable = true;
 
 
   # ----- Enable Editors 
