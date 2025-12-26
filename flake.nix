@@ -50,6 +50,8 @@
 
               # 3. Pass inputs to home-manager modules so you can use them there
               home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.backupFileExtension = "backup";
+
 
               # 4. Define your user directly here
               home-manager.users.monad = import ./home-manager/home.nix;
