@@ -29,5 +29,10 @@ in
     };
 
      #xdg.configFile."emacs".source = config.lib.file.mkOutOfStoreSymlink emacsConfigPath;
-  };
+    services.emacs.package = with pkgs; (
+    (emacsPackagesFor emacs-pgtk).emacsWithPackages (
+        epkgs: [ epkgs.jinx epkgs.vterm ]
+    )
+    );
+    };
 }
