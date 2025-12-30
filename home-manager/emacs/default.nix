@@ -22,7 +22,6 @@ in
   config = lib.mkIf cfg.enable {
     services.emacs.enable = true;
     services.emacs.defaultEditor = true;
-    services.emacs.package = pkgs.emacs-pgtk;
     programs.emacs = {
       enable = true;
 			package = pkgs.emacs-pgtk;
