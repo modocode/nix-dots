@@ -16,11 +16,11 @@
 
 
       # Emacs Overlay
-      (import (builtins.fetchTarball {
-      url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
-      sha256 = "sha256-1iGpbrxKzvF7Ppn8mG86m79CcfvOzYNG3qzlDCXQolg=";
+      # (import (builtins.fetchTarball {
+      # url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
+      # sha256 = "sha256-1iGpbrxKzvF7Ppn8mG86m79CcfvOzYNG3qzlDCXQolg=";
 
-    }))
+    # }))
       
     ];
     # Configure your nixpkgs instance
