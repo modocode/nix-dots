@@ -11,6 +11,7 @@
     peazip
     direnv
     ocs-url
+    obsidian
 
 
     #compilers

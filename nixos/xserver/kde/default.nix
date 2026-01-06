@@ -24,6 +24,16 @@ in
       };
 
       services.displayManager.sddm.wayland.enable = true;
+
+      # KDE Packages
+      environment.systemPackages = with pkgs; [
+        kdePackages.kcalc
+        kdePackages.kdeconnect
+        kdePackages.filelight
+        kdePackages.kdenlive
+        kdePackages.yakuake
+
+      ]
       
 
 
