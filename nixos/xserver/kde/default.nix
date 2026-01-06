@@ -28,12 +28,12 @@ in
       # KDE Packages
       environment.systemPackages = with pkgs; [
         kdePackages.kcalc
-        kdePackages.kdeconnect
+        kdePackages.kdeconnect-kde
         kdePackages.filelight
         kdePackages.kdenlive
         kdePackages.yakuake
 
-      ]
+      ];
       
 
 
