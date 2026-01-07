@@ -12,6 +12,7 @@
     direnv
     ocs-url
     obsidian
+    rclone
 
 
     #compilers
