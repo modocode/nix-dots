@@ -13,6 +13,8 @@
     ocs-url
     obsidian
     rclone
+    cowsay
+    texliveFull
 
 
     #compilers
