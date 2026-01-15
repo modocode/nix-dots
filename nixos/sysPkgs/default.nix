@@ -15,6 +15,8 @@
     rclone
     cowsay
     texliveFull
+    distrobox
+    libreoffice
 
 
     #compilers
@@ -33,4 +35,5 @@
   programs.firefox = {
 		enable = true; 
   };
+    virtualisation.podman.enable = true;
 }
