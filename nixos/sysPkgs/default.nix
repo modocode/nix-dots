@@ -16,7 +16,7 @@
     cowsay
     texliveFull
     distrobox
-    libreoffice
+    libreoffice-qt
 
 
     #compilers
@@ -36,4 +36,6 @@
 		enable = true; 
   };
     virtualisation.podman.enable = true;
+
+    programs.fuse.userAllowOther = true;
 }
