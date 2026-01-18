@@ -17,6 +17,8 @@
     texliveFull
     distrobox
     libreoffice-qt
+    podman-compose
+
 
 
     #compilers
@@ -35,7 +37,11 @@
   programs.firefox = {
 		enable = true; 
   };
-    virtualisation.podman.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
 
     programs.fuse.userAllowOther = true;
 }
