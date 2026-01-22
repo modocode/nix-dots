@@ -5,6 +5,7 @@
   lib,
   config,
   pkgs,
+  system ? pkgs.system,
   ...
 }: {
   # You can import other NixOS modules here
@@ -40,6 +41,7 @@
       flake-registry = "";
       # Workaround for https://github.com/NixOS/nix/issues/9574
       nix-path = config.nix.nixPath;
+
     };
     # Opinionated: disable channels
     channel.enable = false;
@@ -62,9 +64,6 @@
 	  manager = "kde";
 	};
 	
-
-
-
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";

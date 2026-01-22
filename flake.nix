@@ -17,10 +17,6 @@
     #   inputs.home-manager.follows = "home-manager";
     # };
 
-    winapps = {
-        url = "github:winapps-org/winapps";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -62,10 +58,6 @@
               home-manager.users.monad = import ./home-manager/home.nix;
             }
 
-            environment.systemPackages = [
-              winapps.packages."${system}".winapps
-              winapps.packages."${system}".winapps-launcher # optional
-            ];
 
           ];
         };

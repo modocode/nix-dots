@@ -42,6 +42,7 @@
     dockerCompat = true;
   };
 
+    services.onedrive.enable = true;
 
     programs.fuse.userAllowOther = true;
 }
