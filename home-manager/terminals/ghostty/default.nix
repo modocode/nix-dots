@@ -20,7 +20,7 @@ in
       enableZshIntegration = true;
       settings = {
         theme = "ayu";
-        font-family = "Fantasque Nerd Font Mono Regular";
+        font-family = "LigaSauceCodePro Nerd Font";
         font-size = 10;
         
       };

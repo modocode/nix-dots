@@ -49,7 +49,7 @@
 
   # ----- Terminals
   #
-  #my.terminal.ghostty.enable = true;
+  my.terminal.ghostty.enable = true;
 
   my.terminal.shells.zsh.enable = true;
 
