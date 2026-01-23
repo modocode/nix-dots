@@ -17,6 +17,7 @@
     ./shells/zsh
     ./xmonad/default.nix
     ./emacs
+    ./terminals/ghostty
 
   ];
 

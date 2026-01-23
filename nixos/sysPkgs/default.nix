@@ -18,14 +18,10 @@
     distrobox
     libreoffice-qt
     podman-compose
-
-
-
+    zip
     #compilers
     gcc
     clang_20
-
-
 
     # Dictionaries
     hunspell
