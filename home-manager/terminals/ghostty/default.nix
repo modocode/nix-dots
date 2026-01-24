@@ -19,7 +19,7 @@ in
       enable = true;
       enableZshIntegration = true;
       settings = {
-        theme = "ayu";
+        theme = "Ayu";
         font-family = "LigaSauceCodePro Nerd Font";
         font-size = 10;
         

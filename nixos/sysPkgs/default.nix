@@ -19,6 +19,7 @@
     libreoffice-qt
     podman-compose
     zip
+    unzip
     #compilers
     gcc
     clang_20

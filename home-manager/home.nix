@@ -18,6 +18,7 @@
     ./xmonad/default.nix
     ./emacs
     ./terminals/ghostty
+    ./terminals/zoxide
 
   ];
 
@@ -54,6 +55,10 @@
 
   my.terminal.shells.zsh.enable = true;
 
+  my.terminal.zoxide.enable = true;
+
+
+  
 
 
   
