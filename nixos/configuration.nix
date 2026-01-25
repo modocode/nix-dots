@@ -24,6 +24,7 @@
 		./network
 		./fonts
 		./nh
+		./vpn
     #./openssh.nix
 
     # Import your generated (nixos-generate-config) hardware configuration
