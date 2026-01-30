@@ -19,6 +19,7 @@
     ./emacs
     ./terminals/ghostty
     ./terminals/zoxide
+    ./communication
 
   ];
 
@@ -59,7 +60,11 @@
 
 
   
+  # ---- Communications
 
+  my.comms.enable = true;
+
+  
 
   
 
