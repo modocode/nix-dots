@@ -61,6 +61,16 @@ in
         bindkey '^P' history-beginning-search-backward
         bindkey '^N' history-beginning-search-forward
         eval "$(zoxide init zsh)"
+
+        gen-cpp() {
+            echo "use flake" > .envrc
+            direnv allow
+            if [ ! -f main.cpp ]; then
+                touch main.cpp
+            fi
+            echo "Created .envrc and main.cpp. Now open flake.nix and use your snippet!"
+
+
       '';
 
       syntaxHighlighting = {
