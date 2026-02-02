@@ -70,6 +70,7 @@ in
             fi
             echo "Created .envrc and main.cpp. Now open flake.nix and use your snippet!"
 
+            }
 
       '';
 

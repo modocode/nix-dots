@@ -25,6 +25,7 @@ in
 		enable = true;
 		# Configure Languages with Nix, Will likely be using nix shells for development so i 
 		# wont need to install to many here
+    
 
 
 		package = pkgs.helix;
@@ -38,6 +39,7 @@ in
 
   };
 	xdg.configFile."helix".source = config.lib.file.mkOutOfStoreSymlink helixConfigPath;	
+  
 	};
 	
 
