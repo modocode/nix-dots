@@ -20,7 +20,6 @@
     ./terminals/ghostty
     ./terminals/zoxide
     ./communication
-    ./music/default.nix
 
   ];
 
@@ -65,11 +64,6 @@
 
   my.comms.enable = true;
 
-  
-  # Etc
-
-  my.music.enable = true;
-  
 
   programs.home-manager.enable = true;
 

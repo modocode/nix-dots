@@ -25,6 +25,7 @@
 		./fonts
 		./nh
 		./vpn/default.nix
+		./music
 
     #./openssh.nix
 
@@ -65,6 +66,9 @@
 	  enable = true;
 	  manager = "kde";
 	};
+
+
+	my.music.enable = true;
 	
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
