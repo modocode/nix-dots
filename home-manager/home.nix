@@ -20,7 +20,7 @@
     ./terminals/ghostty
     ./terminals/zoxide
     ./communication
-    ./music
+    ./music/default.nix
 
   ];
 

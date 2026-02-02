@@ -6,7 +6,7 @@
 }:
 
 let
-  cfg = config.my.terminal.shells.zsh;
+  cfg = config.my.music;
 
 in
 {
@@ -17,18 +17,16 @@ in
       description = "Enable Music Production Programs";
 
     };
-
+  };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = [
-      pkgs.ardour	  
-      pkgs.yabridge
-      pkgs.yabridgectl
+
+    environment.systemPackages = with pkgs; [
+      ardour
+      yabridge
+      yabridgectl
 
     ];
 
-
-  }
-
-
+  };
 }
