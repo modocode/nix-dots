@@ -13,13 +13,14 @@
     ocs-url
     obsidian
     rclone
-    cowsay
     texliveFull
     distrobox
     libreoffice-qt
     podman-compose
     zip
     unzip
+    arduino-ide
+    
     #compilers
     gcc
     clang_20
