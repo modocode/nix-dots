@@ -1,4 +1,4 @@
-{pkgs, config, lib, ...}:
+{pkgs, config, lib, inputs,  ...}:
 
 let
   cfg = config.my.desktop.kde;
@@ -25,6 +25,11 @@ in
 
       services.displayManager.sddm.wayland.enable = true;
 
+      imports = [
+        # This pulls the system.nix logic from the remote flake
+        "${inputs.aerotheme}/nix/system.nix" 
+      ];
+
       # KDE Packages
       environment.systemPackages = with pkgs; [
         kdePackages.kcalc
@@ -32,6 +37,7 @@ in
         kdePackages.filelight
         kdePackages.kdenlive
         kdePackages.yakuake
+        inputs.aeroplasma-theme.packages.${pkgs.system}.default
 
       ];
       

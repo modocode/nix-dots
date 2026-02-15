@@ -20,6 +20,7 @@
     ./terminals/ghostty
     ./terminals/zoxide
     ./communication
+    "${inputs.aerotheme}/nix/user.nix"
 
   ];
 

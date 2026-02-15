@@ -20,6 +20,7 @@
     zip
     unzip
     arduino-ide
+    platformio-core
     
     #compilers
     gcc

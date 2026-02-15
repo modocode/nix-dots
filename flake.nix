@@ -11,6 +11,12 @@
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
+    aeroplasma-theme = {
+      url = "git+ssh://git@gitgud.io/aean0x/aerothemeplasma.git?dir=nix";
+      # Optional: ensure it uses your system's nixpkgs
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # plasma-manager = {
     #   url = "github:nix-community/plasma-manager";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -25,6 +31,7 @@
       nixpkgs,
       home-manager,
       zen-browser,
+      aeroplasma-theme,
       ...
     }@inputs:
     let
@@ -42,6 +49,8 @@
           modules = [
             ./nixos/configuration.nix
             # inputs.plasma-manager.homeModules.plasma-manager
+
+            aeroplasma-theme.nixosModules.default
 
             home-manager.nixosModules.home-manager
             {
