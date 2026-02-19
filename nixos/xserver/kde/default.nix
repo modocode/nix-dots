@@ -27,7 +27,6 @@ in
 
       imports = [
         # This pulls the system.nix logic from the remote flake
-        "${inputs.aerotheme}/nix/system.nix" 
       ];
 
       # KDE Packages
@@ -37,7 +36,6 @@ in
         kdePackages.filelight
         kdePackages.kdenlive
         kdePackages.yakuake
-        inputs.aeroplasma-theme.packages.${pkgs.system}.default
 
       ];
       
