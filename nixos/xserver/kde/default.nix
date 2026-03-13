@@ -24,11 +24,6 @@ in
       };
 
       services.displayManager.sddm.wayland.enable = true;
-
-      imports = [
-        # This pulls the system.nix logic from the remote flake
-      ];
-
       # KDE Packages
       environment.systemPackages = with pkgs; [
         kdePackages.kcalc

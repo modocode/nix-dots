@@ -22,6 +22,9 @@ in
         theme = "Ayu";
         font-family = "LigaSauceCodePro Nerd Font";
         font-size = 10;
+        keybind = [
+          "shift+enter=text:\n"
+        ];
         
       };
     };

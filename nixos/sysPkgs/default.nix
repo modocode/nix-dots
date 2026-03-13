@@ -26,6 +26,9 @@
     gcc
     clang_20
 
+    claude-code
+    vscode
+
     # Dictionaries
     hunspell
     hunspellDicts.en-us
