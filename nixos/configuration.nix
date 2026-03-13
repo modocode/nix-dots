@@ -61,6 +61,8 @@
 	time.timeZone = "America/Chicago";
 	nixpkgs.config.allowUnfree = true;
 
+	programs.nix-ld.enable = true;
+
 
 	my.desktop = {
 	  enable = true;
