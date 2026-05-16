@@ -8,6 +8,11 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # nix-matlab = {
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   url = "gitlab:doronbehar/nix-matlab";
+    # };
+
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
@@ -26,11 +31,14 @@
       nixpkgs,
       home-manager,
       zen-browser,
+      # nix-matlab,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      # flake-overlay = [ nix-matlab.overlay];
+      
     in
     {
       # NixOS configuration entrypoint
@@ -43,6 +51,7 @@
           modules = [
             ./nixos/configuration.nix
             # inputs.plasma-manager.homeModules.plasma-manager
+            # flake-overlay
 
 
             home-manager.nixosModules.home-manager

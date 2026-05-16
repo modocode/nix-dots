@@ -49,6 +49,9 @@
     # Opinionated: disable channels
     channel.enable = false;
 
+    extraOptions = ''
+        access-tokens = github.com=${(import ./secrets.nix).github-token}
+      '';
     # Opinionated: make flake registry and nix path match flake inputs
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;

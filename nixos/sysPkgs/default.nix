@@ -21,6 +21,8 @@
     unzip
     arduino-ide
     platformio-core
+    mailspring
+    # matlab
     
     #compilers
     gcc
